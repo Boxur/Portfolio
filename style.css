@@ -1,0 +1,154 @@
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #9aa4b2;
+    --accent: #7dd3fc
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter,
+        ui-sans-serif,
+        system-ui,
+        Arial,
+        Helvetica,
+        sans-serif;
+    background: linear-gradient(180deg, #071022 0%, var(--bg) 100%);
+    color: #e6eef6
+}
+
+header {
+    padding: 48px 20px;
+    text-align: center
+}
+
+header img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.06)
+}
+
+h1 {
+    margin: .4rem 0;
+    font-size: 2rem
+}
+
+p.lead {
+    color: var(--muted);
+    margin: 0
+}
+
+nav {
+    margin-top: 16px
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 8px
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 36px auto;
+    padding: 0 16px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.card h3 {
+    margin: .2rem 0
+}
+
+.meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px
+}
+
+.card a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid rgba(125, 211, 252, 0.12);
+    color: var(--accent);
+    text-decoration: none
+}
+
+footer {
+    color: var(--muted);
+    text-align: center;
+    padding: 28px 10px
+}
+
+#about {
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.about-list li {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--muted);
+    font-size: 15px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:visited {
+    color: var(--accent);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(125, 211, 252, 0.6);
+    filter: brightness(1.15);
+}
+
+a:active {
+    filter: brightness(0.9);
+}
+
+
+@media (max-width:520px) {
+    h1 {
+        font-size: 1.6rem
+    }
+}
