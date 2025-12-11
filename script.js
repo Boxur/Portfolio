@@ -4,6 +4,12 @@ const BLACKLIST = [
     "Leetcode"
 ];
 
+const PINNED = [
+    "NeuralNetwork",
+    "Compiler",
+    "Silk.Net.OpenGLtest1"
+];
+
 const MIN_LANGUAGE_PERCENT = 0;
 
 const PROJECTS_CONTAINER = document.getElementById("projects-container");
@@ -14,7 +20,16 @@ async function loadRepos() {
 
     const filtered = repos.filter(r => !BLACKLIST.includes(r.name));
 
-    filtered.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    filtered.sort((a, b) => {
+        const aPinned = PINNED.includes(a.name);
+        const bPinned = PINNED.includes(b.name);
+
+        if (aPinned && !bPinned) return -1;
+        if (!aPinned && bPinned) return 1;
+
+        return new Date(b.updated_at) - new Date(a.updated_at);
+    });
+
 
     for (const repo of filtered) {
         const languages = await fetchLanguages(repo.languages_url);
