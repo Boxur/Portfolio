@@ -123,6 +123,10 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.skill,
+.cert {
     text-align: center;
 }
 
@@ -143,6 +147,10 @@ h2 {
 
 .card h3 {
     margin: .2rem 0;
+}
+
+.card p {
+    font-size: 14px;
 }
 
 .meta {
