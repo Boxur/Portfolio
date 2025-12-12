@@ -7,7 +7,8 @@ const BLACKLIST = [
 const PINNED = [
     "NeuralNetwork",
     "Compiler",
-    "Commands"
+    "Commands",
+		"NeuralNetworkCLI"
 ];
 
 const MIN_LANGUAGE_PERCENT = 0;
