@@ -7,7 +7,7 @@ const BLACKLIST = [
 const PINNED = [
     "NeuralNetwork",
     "Compiler",
-    "Silk.Net.OpenGLtest1"
+    "Commands"
 ];
 
 const MIN_LANGUAGE_PERCENT = 0;
